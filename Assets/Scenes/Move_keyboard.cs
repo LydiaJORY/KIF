@@ -9,12 +9,23 @@ public class Move_keyboard : MonoBehaviour {
 	public KeyCode ToucheAvant, ToucheMonte, ToucheArriere, ToucheDescend, oh;
 	public float Speedy = 10f;
 
+	// Tu seras gentille Lylyy d'importer ces variables qui existent deja dans l'autre feuille mouvementPerso ;)
+	public float ecartementMain = 0.2f;
+	public Transform epGauche,epDroite,mainGauche,mainDroite,ventre;
+
 	// Use this for initialization
 	void Start () {
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		if ( isMainStop() ) {
+			//enPause = !enPause;
+			print ("ça marche;");
+		}
+
+
 		if(Input.GetKey(ToucheAvant))
 		{
 			//rigidbody.MovePosition(transform.position + transform.forward * vitesse);
@@ -58,5 +69,24 @@ public class Move_keyboard : MonoBehaviour {
 
 
 	
+	}
+
+	bool isMainsMemeHauteur() {
+		float mainDroitePosition = mainDroite.localPosition.y;
+		float mainGauchePosition = mainGauche.localPosition.y;
+		float mainDroiteEcartMin = mainDroitePosition - ecartementMain;
+		float mainDroiteEcartMax = mainDroitePosition + ecartementMain;
+	
+		// Si main Gauche est comprise dans dans l'écart minimal/max de la main droite 
+		return mainGauchePosition <= mainDroiteEcartMax && mainGauchePosition >= mainDroiteEcartMin;
+	}
+
+	bool isMainStop() {
+
+		if (isMainsMemeHauteur() && mainDroite.localPosition.y > ventre.position.y) {
+			return true;
+		}
+
+		return false;
 	}
 }

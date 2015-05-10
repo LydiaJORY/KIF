@@ -53,10 +53,6 @@ public class mouvementPerso : MonoBehaviour {
 }*/
 
 
-
-
-
-
 using UnityEngine;
 using System.Collections;
 
@@ -95,18 +91,11 @@ public class mouvementPerso : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		// Si les deux mains sont quasiment au meme niveau, alors on met le jeu en pause
-		if ((mainDroite.localPosition.y+ecartementMain) = (mainDroite.localPosition.y+ecartementMain)) > (ventre.localPosition.y) {
-			enPause = !enPause;
-		}
-		
 		// Avancer
 		//print (corps.localPosition.z);
 		if (corps.localPosition.z > ecartementAvant) {
 			//	print ("avance");
-			centreSalle.Translate(new Vector3 (0,0,vitesseAvant));
-			
+			centreSalle.Translate(new Vector3 (0,0,vitesseAvant));	
 		}
 		// Reculer
 		if (corps.localPosition.z < -ecartementAvant) {
@@ -118,7 +107,6 @@ public class mouvementPerso : MonoBehaviour {
 		if (epDroite.localPosition.z > (epGauche.localPosition.z+ecartementTourne)) {
 			//	print("premier");
 			centreSalle.Rotate(new Vector3 (0,-vitesseTourne,0));
-			
 		}
 		// Tourner Droite
 		if (epDroite.localPosition.z < (epGauche.localPosition.z-ecartementTourne)) {
@@ -126,9 +114,34 @@ public class mouvementPerso : MonoBehaviour {
 			centreSalle.Rotate(new Vector3 (0,vitesseTourne,0));
 			
 		}
+
+		// Mettre en PAUSE
 		
+		if ( isMainStop() ) {
+			enPause = !enPause;
+			print ("ça marche;");
+		}
+	}
+
+	bool isMainsMemeHauteur() {
+		float mainDroitePosition = mainDroite.localPosition.y;
+		float mainGauchePosition = mainGauche.localPosition.y;
+		float mainDroiteEcartMin = mainDroitePosition - ecartementMain;
+		float mainDroiteEcartMax = mainDroitePosition + ecartementMain;
+		
+		// Si main Gauche est comprise dans dans l'écart minimal/max de la main droite 
+		return mainGauchePosition <= mainDroiteEcartMax && mainGauchePosition >= mainDroiteEcartMin;
 	}
 	
+	bool isMainStop() {
+		
+		if (isMainsMemeHauteur() && mainDroite.localPosition.y > ventre.position.y) {
+			return true;
+		}
+		
+		return false;
+	}
+		
 	// Afficher une interface
 	void OnGUI () {
 		
@@ -147,10 +160,14 @@ public class mouvementPerso : MonoBehaviour {
 			GUI.Box(new Rect(Screen.width / 2 - 100 / 2, Screen.height / 2 - 200, 100, 40), "Pause", customButton);
 			
 			// Si les deux mains sont quasiment au meme niveau, alors on met le jeu en pause
-			if ((mainDroite.localPosition.y+ecartementMain) = (mainDroite.localPosition.y+ecartementMain)) {
+			if ( (mainDroite.localPosition.y + ecartementMain) == (mainDroite.localPosition.y + ecartementMain) ) {
+
 				// On retourne la variable enPause en faux
-				enPause = false;
+				//enPause = false;
+
+
 			}
 		}
 	}
+
 }
