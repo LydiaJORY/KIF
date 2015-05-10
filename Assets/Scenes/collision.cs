@@ -5,7 +5,7 @@ public class collision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
@@ -15,8 +15,6 @@ public class collision : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 
-		print(gameObject.name);
-		print ("hi");
-		print (col.collider.gameObject.name);
+		print ("Tu es rentré en collision avec" col.collider.gameObject.name);
 	}
 }
