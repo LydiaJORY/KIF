@@ -129,7 +129,7 @@ public class mouvementPerso : MonoBehaviour {
 		float mainDroiteEcartMin = mainDroitePosition - ecartementMain;
 		float mainDroiteEcartMax = mainDroitePosition + ecartementMain;
 		
-		// Si main Gauche est comprise dans dans l'écart minimal/max de la main droite 
+		// Si main Gauche est comprise dans dans l'écart min/max de la main droite 
 		return mainGauchePosition <= mainDroiteEcartMax && mainGauchePosition >= mainDroiteEcartMin;
 	}
 	
