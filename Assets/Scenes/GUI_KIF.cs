@@ -1,22 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class collision : MonoBehaviour {
+public class GUI_KIF : MonoBehaviour {
 
 	public mouvementPerso mouvementPerso;
 
 	// Use this for initialization
 	void Start () {
-
+	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void OnGUI () {
 
+
+		if (Input.GetKey (KeyCode.A)){
+
+			print ("l");
+			GUI.Box(new Rect(10,10,100,90), "Loader Menu");
+		}
+
+	
 	}
-
-	void OnCollisionEnter(Collision col) {
-
-		print ("Tu es rentré en collision avec" + col.collider.gameObject.name);
-	}
+	
 }

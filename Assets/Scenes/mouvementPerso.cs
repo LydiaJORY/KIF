@@ -61,11 +61,18 @@ public class mouvementPerso : MonoBehaviour {
 		}
 
 		// Mettre en PAUSE
+
+
 		
-		if ( isMainStop() ) {
-			enPause = !enPause;
-			print ("ça marche;");
+		if ( isMainStop() || Input.GetKey(KeyCode.Escape) ) {
+			//enPause = !enPause;
+			enPause = true;
+			print ("ca serait cool de passer en pause...");
+
 		}
+
+
+
 	}
 
 	bool isMainsMemeHauteur() {
@@ -91,11 +98,14 @@ public class mouvementPerso : MonoBehaviour {
 	void OnGUI () {
 		
 		// Si le jeu est en pause, on affiche
-		if (enPause){
-			// La variable enPause est vraie
-			enPause = true;
+
+
+			if (enPause) {
+				GUI.Box(new Rect(10,10,100,90), "Loader Menu");
+				print ("PAUSE");
+			};
 			
-			centreSalle.Translate(new Vector3 (0,0,0));
+			/*centreSalle.Translate(new Vector3 (0,0,0));
 			centreSalle.Translate(new Vector3 (0,0,0));
 			centreSalle.Rotate(new Vector3 (0,0,0));
 			centreSalle.Rotate(new Vector3 (0,0,0));
@@ -112,7 +122,7 @@ public class mouvementPerso : MonoBehaviour {
 
 
 			}
-		}
+		}*/
 	}
 
 }
