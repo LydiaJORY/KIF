@@ -119,18 +119,10 @@ public class Ray : MonoBehaviour {
 							// Une GUI qui récupère le texte de la variable
 							GUI.Box (new Rect(Screen.width / 2 - 500 / 2, Screen.height / 2 - 240, 500, 200), texteFauneFloreMarine, customButton);
 						}
-						
-					}
-					
-					
+					}					
 				}
-				
-				
-			}
-			
-			
+			}			
 		}
-		
 	}
 	
 	void OnCollisionEnter (Collision col){
