@@ -151,11 +151,6 @@ public class mouvementPerso : MonoBehaviour {
 				// On retourne la variable enPause en faux
 				enPause = false;
 			}
-			
 		}
-		
 	}
 }
-
-
-
