@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GUI_KIF : MonoBehaviour {
+public class KIF_Gui : MonoBehaviour {
 
-	public mouvementPerso mouvementPerso;
+	public MouvementPerso mouvementPerso;
+	public GUIStyle customButton;
+
+
 
 	// Use this for initialization
 	void Start () {

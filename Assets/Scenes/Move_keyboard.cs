@@ -14,7 +14,7 @@ public class Move_keyboard : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		mouvementPerso.fonctionBidon ();
+		MouvementPerso.fonctionBidon ();
 
 
 		if(Input.GetKey(ToucheAvant))

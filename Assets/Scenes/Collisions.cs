@@ -3,7 +3,7 @@ using System.Collections;
 
 public class collision : MonoBehaviour {
 
-	public mouvementPerso mouvementPerso;
+	public MouvementPerso mouvementPerso;
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +12,8 @@ public class collision : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
 
 	}
 

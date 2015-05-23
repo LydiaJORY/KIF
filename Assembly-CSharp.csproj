@@ -88,7 +88,6 @@
      <Compile Include="Assets\Scenes\Move_keyboard.cs" />
      <Compile Include="Assets\Scenes\Pause.cs" />
      <Compile Include="Assets\Scenes\Ray.cs" />
-     <Compile Include="Assets\fonctionTest.cs" />
      <None Include="Assets\Shaders\ReflectiveDiffuseSpecTransp.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>

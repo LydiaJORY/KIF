@@ -590,6 +590,7 @@ GameObject:
   - 124: {fileID: 158}
   - 81: {fileID: 154}
   - 114: {fileID: 88}
+  - 114: {fileID: 91}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -862,66 +863,32 @@ MonoBehaviour:
   mainGauche: {fileID: 72}
   mainDroite: {fileID: 70}
   ventre: {fileID: 60}
-  pauseEnAttente: 0
-  tempsPause: 0
   customButton:
     m_Name: 5061757365
     m_Normal:
       m_Background: {fileID: 0}
-      m_TextColor:
-        r: 0
-        g: 0
-        b: 0
-        a: 1
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
-      m_TextColor:
-        r: 0
-        g: 0
-        b: 0
-        a: 1
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
       m_Background: {fileID: 0}
-      m_TextColor:
-        r: 0
-        g: 0
-        b: 0
-        a: 1
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
       m_Background: {fileID: 0}
-      m_TextColor:
-        r: 0
-        g: 0
-        b: 0
-        a: 1
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_OnNormal:
       m_Background: {fileID: 0}
-      m_TextColor:
-        r: 0
-        g: 0
-        b: 0
-        a: 1
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_OnHover:
       m_Background: {fileID: 0}
-      m_TextColor:
-        r: 0
-        g: 0
-        b: 0
-        a: 1
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_OnActive:
       m_Background: {fileID: 0}
-      m_TextColor:
-        r: 0
-        g: 0
-        b: 0
-        a: 1
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_OnFocused:
       m_Background: {fileID: 0}
-      m_TextColor:
-        r: 0
-        g: 0
-        b: 0
-        a: 1
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Border:
       m_Left: 0
       m_Right: 0
@@ -955,7 +922,6 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  enPause: 0
 --- !u!199 &80
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -2145,7 +2111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed2eea2f8257a74fbd7ed260bb7a0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouvementPerso: {fileID: 0}
 --- !u!114 &88
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,7 +2153,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c60c89695abd33438e3461775e01473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test1: {fileID: 79}
+--- !u!114 &91
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 58}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37d15113fe1ae046b9c4c5af73f8dea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ecartementMain: 30
+  MouvementPerso: {fileID: 0}
+  KIF_Gui: {fileID: 0}
 --- !u!4 &109
 Transform:
   m_ObjectHideFlags: 0

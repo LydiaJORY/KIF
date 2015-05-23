@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class mouvementPerso : MonoBehaviour {
+public class MouvementPerso : MonoBehaviour {
 	
 	// Déclaration des variables
 	
@@ -14,6 +14,15 @@ public class mouvementPerso : MonoBehaviour {
 
 	// On peut régler la typo des textes en public dans Unity
 	public GUIStyle customButton;
+
+
+
+	public static int multiplication(int nombreUn, int nombreDeux)
+	{
+		return nombreUn * nombreDeux;
+	}
+
+
 	
 
 	
