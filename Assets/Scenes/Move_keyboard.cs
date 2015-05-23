@@ -5,7 +5,6 @@ public class Move_keyboard : MonoBehaviour {
 
 	public float vitesse;
 	public Vector3 avant, arriere, Monte, Descend;
-
 	public KeyCode ToucheAvant, ToucheMonte, ToucheArriere, ToucheDescend, oh;
 	public float Speedy = 10f;
 
@@ -15,6 +14,9 @@ public class Move_keyboard : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		mouvementPerso.fonctionBidon ();
+
+
 		if(Input.GetKey(ToucheAvant))
 		{
 			//rigidbody.MovePosition(transform.position + transform.forward * vitesse);

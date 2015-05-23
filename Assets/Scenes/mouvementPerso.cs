@@ -11,17 +11,59 @@ public class mouvementPerso : MonoBehaviour {
 	public float ecartementAvant = 0.4f;
 	public float ecartementTourne,ecartementMain = 0.2f;
 	public Transform epGauche,epDroite,mainGauche,mainDroite,ventre;
-	
+
 	// On peut régler la typo des textes en public dans Unity
 	public GUIStyle customButton;
 	
-	// Permet de savoir si je le jeu est en pause ou non
-	private bool enPause = false;
+
 	
 	
 	// Use this for initialization
 	void Start () {
 		
+		
+	}
+
+	public static void fonctionBidon(){
+		print (" je suis dans la fonction bidon");
+		}
+	
+	// Update is called once per frame
+	void Update () {
+
+		// avancer
+		if (corps.localPosition.z > ecartementAvant) {
+				//	print ("avance");
+				centreSalle.Translate (new Vector3 (0, 0, vitesseAvant));	
+			}
+		// Reculer
+		if (corps.localPosition.z < -ecartementAvant) {
+			//	print ("recule");
+			centreSalle.Translate (new Vector3 (0, 0, -vitesseAvant));
+		}
+		// Tourner Gauche
+		
+		if (epDroite.localPosition.z > (epGauche.localPosition.z + ecartementTourne)) {
+			//	print("premier");
+			centreSalle.Rotate (new Vector3 (0, -vitesseTourne, 0));
+		}
+		// Tourner Droite
+		if (epDroite.localPosition.z < (epGauche.localPosition.z - ecartementTourne)) {
+			//	print("deuxième");
+			centreSalle.Rotate (new Vector3 (0, vitesseTourne, 0));
+			
+		}
+	
+
+
+	
+
+
+
+
+
+		//	Time.timeScale = enPause ? 0 : 1;
+	/*
 		// On arrete le temps
 		if (enPause) {
 			Time.timeScale = 0f;
@@ -31,80 +73,17 @@ public class mouvementPerso : MonoBehaviour {
 		else {
 			Time.timeScale = 1.0f;
 		}
-	}
-	
-	
-	// Update is called once per frame
-	void Update () {
+
+	*/	
+		
 		// Avancer
 		//print (corps.localPosition.z);
-		if (corps.localPosition.z > ecartementAvant) {
-			//	print ("avance");
-			centreSalle.Translate(new Vector3 (0,0,vitesseAvant));	
-		}
-		// Reculer
-		if (corps.localPosition.z < -ecartementAvant) {
-			//	print ("recule");
-			centreSalle.Translate(new Vector3 (0,0,-vitesseAvant));
-		}
-		// Tourner Gauche
-		
-		if (epDroite.localPosition.z > (epGauche.localPosition.z+ecartementTourne)) {
-			//	print("premier");
-			centreSalle.Rotate(new Vector3 (0,-vitesseTourne,0));
-		}
-		// Tourner Droite
-		if (epDroite.localPosition.z < (epGauche.localPosition.z-ecartementTourne)) {
-			//	print("deuxième");
-			centreSalle.Rotate(new Vector3 (0,vitesseTourne,0));
-			
-		}
 
 		// Mettre en PAUSE
 
-
-		
-		if ( isMainStop() || Input.GetKey(KeyCode.Escape) ) {
-			//enPause = !enPause;
-			enPause = true;
-			print ("ca serait cool de passer en pause...");
-
-		}
-
-
-
-	}
-
-	bool isMainsMemeHauteur() {
-		float mainDroitePosition = mainDroite.localPosition.y;
-		float mainGauchePosition = mainGauche.localPosition.y;
-		float mainDroiteEcartMin = mainDroitePosition - ecartementMain;
-		float mainDroiteEcartMax = mainDroitePosition + ecartementMain;
-		
-		// Si main Gauche est comprise dans dans l'écart min/max de la main droite 
-		return mainGauchePosition <= mainDroiteEcartMax && mainGauchePosition >= mainDroiteEcartMin;
-	}
-	
-	bool isMainStop() {
-		
-		if (isMainsMemeHauteur() && mainDroite.localPosition.y > ventre.position.y) {
-			return true;
-		}
-		
-		return false;
-	}
-		
 	// Afficher une interface
-	void OnGUI () {
-		
-		// Si le jeu est en pause, on affiche
 
-
-			if (enPause) {
-				GUI.Box(new Rect(10,10,100,90), "Loader Menu");
-				print ("PAUSE");
-			};
-			
+			  			
 			/*centreSalle.Translate(new Vector3 (0,0,0));
 			centreSalle.Translate(new Vector3 (0,0,0));
 			centreSalle.Rotate(new Vector3 (0,0,0));
