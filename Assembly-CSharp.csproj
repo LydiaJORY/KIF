@@ -83,11 +83,10 @@
      <Compile Include="Assets\Kinect\SkeletonWrapper.cs" />
      <Compile Include="Assets\PrimitivePlus\Scripts\PrimitivePlusEditor.cs" />
      <Compile Include="Assets\Scenes\Collisions.cs" />
-     <Compile Include="Assets\Scenes\DontGoThroughThings.cs" />
-     <Compile Include="Assets\Scenes\Gui.cs" />
-     <Compile Include="Assets\Scenes\Move_keyboard.cs" />
+     <Compile Include="Assets\Scenes\CustomGUI.cs" />
+     <Compile Include="Assets\Scenes\HandRay.cs" />
+     <Compile Include="Assets\Scenes\MoveKeyboard.cs" />
      <Compile Include="Assets\Scenes\Pause.cs" />
-     <Compile Include="Assets\Scenes\Ray.cs" />
      <Compile Include="Assets\Scenes\mouvementPerso.cs" />
      <None Include="Assets\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\PrimitivePlus\Documentation\ReadMe.txt" />
