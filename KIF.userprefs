@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\HandRay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\Activable.cs">
     <Files>
-      <File FileName="Assets\Scenes\HandRay.cs" Line="42" Column="3" />
-      <File FileName="Assets\Scenes\CustomGUI.cs" Line="8" Column="17" />
+      <File FileName="Assets\Scenes\HandRay.cs" Line="62" Column="35" />
+      <File FileName="Assets\Scenes\Collisions.cs" Line="25" Column="1" />
+      <File FileName="Assets\Scenes\Activable.cs" Line="17" Column="19" />
+      <File FileName="Assets\Scenes\CustomGUI.cs" Line="13" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

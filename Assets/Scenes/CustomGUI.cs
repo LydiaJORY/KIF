@@ -10,10 +10,6 @@ public class CustomGUI : MonoBehaviour {
 	// Update is called once per frame
 	void OnGUI () {
 
-		if (Input.GetKey (KeyCode.A)){
 
-			print ("l");
-			GUI.Box(new Rect(10,10,100,90), "Loader Menu");
-		}	
 	}
 }

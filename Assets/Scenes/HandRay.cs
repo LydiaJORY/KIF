@@ -8,11 +8,15 @@ public class HandRay : MonoBehaviour {
 	public GameObject touchable;
 	public Transform curseurRayon;
 	public Texture2D imgActivable;
+	public Activable activable;
 
 	public float activeDistance = 40f;
 	public bool loaderStart = false;
 	//private string texteFauneFloreMarine = "Lorem Ipsum sit dolor amet";
 	
+	void Start() {
+		activable = new Activable();
+	}
 
 	void OnGUI () {
 
@@ -43,8 +47,23 @@ public class HandRay : MonoBehaviour {
 
 			if (hit.transform.tag == "activable"){
 
-				print ("Affiche le picto");
-			}			
+
+
+				if (!activable.isTimeStarted()) {
+
+					activable.start();
+					print ("timer");
+					activable.picto = "(n___n)";
+
+				}
+
+				if (activable.isReady()) {
+					activable.showPicto();
+					print ("affiche le picto !");
+				}
+			} else {
+				activable.reset();
+			}
 		}
 	}
 }
