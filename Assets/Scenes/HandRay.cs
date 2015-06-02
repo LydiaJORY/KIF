@@ -8,14 +8,17 @@ public class HandRay : MonoBehaviour {
 	public GameObject touchable;
 	public Transform curseurRayon;
 	public Texture2D imgActivable;
-	public Activable activable;
+	public Activable2 activable;
+	public static GameObject obj;
+	Activable2 script = obj.AddComponent<Activable2>();
 
 	public float activeDistance = 40f;
 	public bool loaderStart = false;
 	//private string texteFauneFloreMarine = "Lorem Ipsum sit dolor amet";
 	
 	void Start() {
-		activable = new Activable();
+		//activable = new Activable2();
+	
 	}
 
 	void OnGUI () {

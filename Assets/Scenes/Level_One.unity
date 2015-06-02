@@ -2012,12 +2012,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 58}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05c8350f08cb43a418bff30a613cdf32, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ffe1adc84ccfc64689e41e8c311c6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loadingTime: 15
   startTime: 0
-  picto: Olalalah
+  picto: lol
   displayPicto: 0
 --- !u!4 &109
 Transform:
