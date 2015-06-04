@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Activable : MonoBehaviour {
 
 	public static GUI GUI;
 
-	public static float loadingTime = 15;
+
+	public static float loadingTime = 5;
 	public static float startTime = 0;
+	public static string picto;
 
 	public static void start () {
 
@@ -23,5 +26,21 @@ public class Activable : MonoBehaviour {
 	
 	public static void reset() {
 		startTime = 0;
+	}
+
+	public static bool isActivable (string tag) {
+
+		switch (tag) {
+
+			case "Hublot":
+				picto="Hublot picto";
+				break;
+			
+			case "Bouche_Aeration" :
+				picto="BoucheAeration";
+				break;
+		}
+
+		return picto != null;
 	}
 }

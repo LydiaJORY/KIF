@@ -13,6 +13,7 @@ public class HandRay : MonoBehaviour {
 	public float activeDistance = 40f;
 	public bool showPicto = false;
 	public bool loading = false;
+	public string pictoMsg;
 
 	void OnGUI () {
 		if (loading) {
@@ -20,7 +21,7 @@ public class HandRay : MonoBehaviour {
 		}
 
 		if (showPicto) {
-			GUI.Box (new Rect (10,10,100,90), "Picto");
+			GUI.Box (new Rect (10,10,100,90), pictoMsg);
 		}
 	}
 
@@ -41,13 +42,16 @@ public class HandRay : MonoBehaviour {
 		
 		if (Physics.Raycast (transform.position, profondeur, out hit,activeDistance)) {
 
-			if (hit.transform.tag == "activable"){
+			if ( Activable.isActivable(hit.transform.tag) ) {
+
+				print ("OK");
 
 				if (!Activable.isTimeStarted()) {
 					Activable.start();
 				}
 
 				if (Activable.isReady()) {
+					pictoMsg = Activable.picto;
 					loading = false;
 					showPicto = true;
 				} else {
