@@ -451,9 +451,9 @@ MonoBehaviour:
   touchable: {fileID: 0}
   curseurRayon: {fileID: 1424021177}
   imgActivable: {fileID: 0}
-  activable: {fileID: 0}
-  activeDistance: 3
-  loaderStart: 0
+  activeDistance: 10
+  showPicto: 0
+  loading: 0
 --- !u!1 &55
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,10 +2015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ffe1adc84ccfc64689e41e8c311c6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingTime: 15
-  startTime: 0
-  picto: lol
-  displayPicto: 0
 --- !u!4 &109
 Transform:
   m_ObjectHideFlags: 0
@@ -4158,7 +4154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100096, guid: 599c919b8961c7440b77de0be80e6749, type: 3}
       propertyPath: m_TagString
-      value: activable
+      value: test
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 599c919b8961c7440b77de0be80e6749, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5589,7 +5585,7 @@ GameObject:
   - 95: {fileID: 1076224630}
   m_Layer: 11
   m_Name: BACKGROUND
-  m_TagString: activable
+  m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

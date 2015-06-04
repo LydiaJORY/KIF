@@ -8,24 +8,19 @@ public class HandRay : MonoBehaviour {
 	public GameObject touchable;
 	public Transform curseurRayon;
 	public Texture2D imgActivable;
-	public Activable2 activable;
 	public static GameObject obj;
-	Activable2 script = obj.AddComponent<Activable2>();
 
 	public float activeDistance = 40f;
-	public bool loaderStart = false;
-	//private string texteFauneFloreMarine = "Lorem Ipsum sit dolor amet";
-	
-	void Start() {
-		//activable = new Activable2();
-	
-	}
+	public bool showPicto = false;
+	public bool loading = false;
 
 	void OnGUI () {
+		if (loading) {
+			GUI.Box (new Rect (10,10,100,90), "Loading...");
+		}
 
-		if (loaderStart) {
-
-			GUI.DrawTexture (new Rect (100, 100, 60, 60), imgActivable, ScaleMode.ScaleToFit, true, 10.0F);
+		if (showPicto) {
+			GUI.Box (new Rect (10,10,100,90), "Picto");
 		}
 	}
 
@@ -46,28 +41,24 @@ public class HandRay : MonoBehaviour {
 		
 		if (Physics.Raycast (transform.position, profondeur, out hit,activeDistance)) {
 
-		
-
 			if (hit.transform.tag == "activable"){
 
-
-
-				if (!activable.isTimeStarted()) {
-
-					activable.start();
-					print ("timer");
-					activable.picto = "(n___n)";
-
+				if (!Activable.isTimeStarted()) {
+					Activable.start();
 				}
 
-				if (activable.isReady()) {
-					activable.showPicto();
-					print ("affiche le picto !");
+				if (Activable.isReady()) {
+					loading = false;
+					showPicto = true;
+				} else {
+					loading = true;
+					showPicto = false;
 				}
 			} else {
-				activable.reset();
+				loading = false;
+				showPicto = false;
+				Activable.reset ();
 			}
 		}
 	}
 }
-

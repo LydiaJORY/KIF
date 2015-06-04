@@ -82,7 +82,7 @@
      <Compile Include="Assets\Kinect\KinectSensor.cs" />
      <Compile Include="Assets\Kinect\SkeletonWrapper.cs" />
      <Compile Include="Assets\PrimitivePlus\Scripts\PrimitivePlusEditor.cs" />
-     <Compile Include="Assets\Scenes\Activable2.cs" />
+     <Compile Include="Assets\Scenes\Activable.cs" />
      <Compile Include="Assets\Scenes\Collisions.cs" />
      <Compile Include="Assets\Scenes\CustomGUI.cs" />
      <Compile Include="Assets\Scenes\HandRay.cs" />
