@@ -13,10 +13,10 @@ SceneSettings:
 --- !u!104 &2
 RenderSettings:
   m_Fog: 0
-  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: .00999999978
-  m_LinearFogStart: 0
+  m_FogColor: {r: 0, g: .797794044, b: .875, a: 1}
+  m_FogMode: 1
+  m_FogDensity: 1
+  m_LinearFogStart: 900
   m_LinearFogEnd: 300
   m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
   m_SkyboxMaterial: {fileID: 0}
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 16}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c7dc4dcaf242b844908e9c7ad368b7f, type: 3}
   m_Name: 
@@ -451,7 +451,7 @@ MonoBehaviour:
   touchable: {fileID: 0}
   curseurRayon: {fileID: 1424021177}
   imgActivable: {fileID: 0}
-  activeDistance: 10
+  activeDistance: 40
   showPicto: 0
   loading: 0
   pictoMsg: 
@@ -789,6 +789,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de48df9dc6f4b664c925925e3abac299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corps: {fileID: 0}
+  centreSalle: {fileID: 0}
+  maCamera: {fileID: 0}
+  epGauche: {fileID: 0}
+  epDroite: {fileID: 0}
+  mainGauche: {fileID: 0}
+  mainDroite: {fileID: 0}
+  ventre: {fileID: 0}
+  vitesseAvant: .0500000007
+  vitesseTourne: .0500000007
+  ecartementAvant: .400000006
+  ecartementTourne: 0
+  ecartementMain: .200000003
 --- !u!199 &80
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -4194,7 +4207,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 599c919b8961c7440b77de0be80e6749, type: 3}
       propertyPath: m_LocalPosition.z
-      value: .00810000021
+      value: .0250000004
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 599c919b8961c7440b77de0be80e6749, type: 3}
       propertyPath: m_TagString
@@ -8329,7 +8342,7 @@ Transform:
   m_PrefabInternal: {fileID: 135189977}
   m_GameObject: {fileID: 1781781882}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: -.00469999993, y: -.00300000003, z: .00810000021}
+  m_LocalPosition: {x: -.00469999993, y: -.00300000003, z: .0250000004}
   m_LocalScale: {x: .0817812681, y: .365065038, z: .365065038}
   m_Children: []
   m_Father: {fileID: 1076224629}

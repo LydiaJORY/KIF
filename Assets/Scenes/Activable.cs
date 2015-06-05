@@ -5,8 +5,7 @@ using System;
 public class Activable : MonoBehaviour {
 
 	public static GUI GUI;
-
-
+	
 	public static float loadingTime = 5;
 	public static float startTime = 0;
 	public static string picto;

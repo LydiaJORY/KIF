@@ -86,9 +86,10 @@
      <Compile Include="Assets\Scenes\Collisions.cs" />
      <Compile Include="Assets\Scenes\CustomGUI.cs" />
      <Compile Include="Assets\Scenes\HandRay.cs" />
+     <Compile Include="Assets\Scenes\MenuPrincipal.cs" />
+     <Compile Include="Assets\Scenes\MouvementPerso.cs" />
      <Compile Include="Assets\Scenes\MoveKeyboard.cs" />
      <Compile Include="Assets\Scenes\Pause.cs" />
-     <Compile Include="Assets\Scenes\mouvementPerso.cs" />
      <None Include="Assets\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\PrimitivePlus\Documentation\ReadMe.txt" />
  <Reference Include="UnityEngine.UI">
