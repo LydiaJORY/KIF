@@ -4,13 +4,11 @@ using System.Collections;
 public class MoveKeyboard : MonoBehaviour {
 
 	public float vitesse;
-	public Vector3 avant, arriere, sauter, descend;
-	public KeyCode toucheAvant, toucheSauter, toucheArriere, toucheDescend;
-	
+	public Vector3 avant, arriere, sauter;
+	public KeyCode toucheAvant, toucheSauter, toucheArriere;
+
 
 	void Update () {
-
-
 
 		// AVANCER
 		if(Input.GetKey(toucheAvant)) {

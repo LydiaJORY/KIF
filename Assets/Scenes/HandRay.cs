@@ -5,12 +5,9 @@ public class HandRay : MonoBehaviour {
 
 	public MouvementPerso mouvementPerso;
 	public CustomGUI customGUI;
-	public GameObject touchable;
 	public Transform curseurRayon;
-	public Texture2D imgActivable;
-	public static GameObject obj;
 
-	public float activeDistance = 40f;
+	public float activeDistance = 10f;
 	public bool showPicto = false;
 	public bool loading = false;
 	public string pictoMsg;
@@ -44,7 +41,7 @@ public class HandRay : MonoBehaviour {
 
 			if ( Activable.isActivable(hit.transform.tag) ) {
 
-				print ("OK");
+			
 
 				if (!Activable.isTimeStarted()) {
 					Activable.start();

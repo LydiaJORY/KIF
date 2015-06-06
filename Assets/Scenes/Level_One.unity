@@ -448,9 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouvementPerso: {fileID: 0}
   customGUI: {fileID: 0}
-  touchable: {fileID: 0}
   curseurRayon: {fileID: 1424021177}
-  imgActivable: {fileID: 0}
   activeDistance: 40
   showPicto: 0
   loading: 0
@@ -3441,11 +3439,9 @@ MonoBehaviour:
   avant: {x: 0, y: 0, z: 1}
   arriere: {x: 0, y: 0, z: -1}
   sauter: {x: 0, y: 1, z: 0}
-  descend: {x: 0, y: 0, z: 0}
   toucheAvant: 273
   toucheSauter: 32
   toucheArriere: 274
-  toucheDescend: 0
 --- !u!1 &15717958
 GameObject:
   m_ObjectHideFlags: 0
@@ -8832,7 +8828,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 85e45b14a25a4244bac98b2c053a8d8b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
