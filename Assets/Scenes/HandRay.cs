@@ -7,6 +7,9 @@ public class HandRay : MonoBehaviour {
 	public HandRay handRay;
 	public CustomGUI customGUI;
 	public Transform curseurRayon;
+	public Texture2D LoadingGUI;
+	public GUIStyle customButton;
+
 	
 	public float activeDistance = 10f;
 	public bool showPicto = false;
@@ -17,13 +20,17 @@ public class HandRay : MonoBehaviour {
 	public string pictoMsg;
 	
 	void OnGUI () {
+
+
+		//public static string textFieldString = HandRay.pictoMsg;
+
 		
 		if (loading) {
-			GUI.Box (new Rect (10,10,100,90), "Loading...");
+			GUI.Label (new Rect (Screen.width - 500, Screen.height - 250,100,100), LoadingGUI, customButton);
 		}
 		
 		if (showPicto) {
-			GUI.Box (new Rect (10,10,100,90), pictoMsg);
+			GUI.TextField (new Rect (Screen.width - 500, Screen.height - 250,100,90), pictoMsg);
 		}
 	}
 	
