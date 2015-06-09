@@ -87,13 +87,13 @@
      <Compile Include="Assets\Scenes\CustomGUI.cs" />
      <Compile Include="Assets\Scenes\HandRay.cs" />
      <Compile Include="Assets\Scenes\MenuPrincipal.cs" />
-     <Compile Include="Assets\Scenes\MouvementPerso.cs" />
      <Compile Include="Assets\Scenes\MoveKeyboard.cs" />
      <Compile Include="Assets\Scenes\Pause.cs" />
+     <Compile Include="Assets\Scenes\mouvementPerso.cs" />
      <None Include="Assets\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\PrimitivePlus\Documentation\ReadMe.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Lydia/Documents/Game/KIF/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Lydia/Documents/Game/KIF/KIF/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>

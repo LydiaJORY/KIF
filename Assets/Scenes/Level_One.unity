@@ -447,9 +447,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouvementPerso: {fileID: 0}
+  handRay: {fileID: 0}
   customGUI: {fileID: 0}
   curseurRayon: {fileID: 1424021177}
-  activeDistance: 40
+  activeDistance: 10
   showPicto: 0
   loading: 0
   pictoMsg: 
@@ -787,19 +788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de48df9dc6f4b664c925925e3abac299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corps: {fileID: 0}
-  centreSalle: {fileID: 0}
-  maCamera: {fileID: 0}
-  epGauche: {fileID: 0}
-  epDroite: {fileID: 0}
-  mainGauche: {fileID: 0}
-  mainDroite: {fileID: 0}
-  ventre: {fileID: 0}
-  vitesseAvant: .0500000007
-  vitesseTourne: .0500000007
-  ecartementAvant: .400000006
-  ecartementTourne: 0
-  ecartementMain: .200000003
 --- !u!199 &80
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -2034,7 +2022,7 @@ Transform:
   m_PrefabInternal: {fileID: 188}
   m_GameObject: {fileID: 55}
   m_LocalRotation: {x: -.00167050411, y: .753017008, z: .00184616446, w: .657996416}
-  m_LocalPosition: {x: 6.19000006, y: 3.22000003, z: -5.5999999}
+  m_LocalPosition: {x: 6.42999983, y: 3.22000003, z: -3.80999994}
   m_LocalScale: {x: 1, y: 1.00000012, z: 1}
   m_Children:
   - {fileID: 110}
@@ -3182,7 +3170,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 996f0228d03f2114bb727b5df57dce86, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.19000006
+      value: 6.42999983
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 996f0228d03f2114bb727b5df57dce86, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3190,7 +3178,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400042, guid: 996f0228d03f2114bb727b5df57dce86, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -5.5999999
+      value: -3.80999994
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 996f0228d03f2114bb727b5df57dce86, type: 2}
       propertyPath: sw
