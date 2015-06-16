@@ -18,7 +18,10 @@ public class Pause : MonoBehaviour {
 
 	void Update () {
 
-		if (Time.time-tempsPause >2 && (isMainsMemeHauteur() || Input.GetKey(KeyCode.Escape)) ) {
+
+
+		//if (Time.time-tempsPause >2 && (isMainsMemeHauteur() || Input.GetKey(KeyCode.Escape)) ) {
+		if (true) {
 			enPause = true;
 			print ("ca serait cool de passer en pause...");
 		}

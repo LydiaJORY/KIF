@@ -527,6 +527,7 @@ GameObject:
   - 114: {fileID: 79}
   - 65: {fileID: 85}
   - 54: {fileID: 86}
+  - 114: {fileID: 57}
   m_Layer: 10
   m_Name: KinectAvatar
   m_TagString: Untagged
@@ -552,6 +553,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &57
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37d15113fe1ae046b9c4c5af73f8dea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouvementPerso: {fileID: 0}
+  customGUI: {fileID: 0}
+  ecartementMain: 0
+  tempsPause: 0
+  pauseEnAttente: 0
 --- !u!1 &58
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,19 +842,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de48df9dc6f4b664c925925e3abac299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corps: {fileID: 59}
-  centreSalle: {fileID: 91135708}
+  corps: {fileID: 110}
+  centreSalle: {fileID: 109}
   maCamera: {fileID: 112}
   epGauche: {fileID: 75}
   epDroite: {fileID: 71}
   mainGauche: {fileID: 72}
   mainDroite: {fileID: 70}
   ventre: {fileID: 110}
-  vitesseAvant: 100
-  vitesseTourne: 100
-  ecartementAvant: .400000006
-  ecartementTourne: .689999998
-  ecartementMain: .200000003
+  vitesseAvant: .300000012
+  vitesseTourne: 3
+  ecartementAvant: .200000003
+  ecartementTourne: .200000003
+  ecartementMain: .00999999978
 --- !u!65 &85
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -857,7 +874,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 55}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 2.6500001
   m_AngularDrag: 0
   m_UseGravity: 0

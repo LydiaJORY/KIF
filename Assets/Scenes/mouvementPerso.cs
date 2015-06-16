@@ -7,7 +7,7 @@ public class MouvementPerso : MonoBehaviour {
 	public Transform corps, centreSalle, maCamera;
 	public Transform epGauche,epDroite,mainGauche,mainDroite,ventre;
 
-	public float vitesseAvant = 0.05f;
+	public float vitesseAvant = 10f;
 	public float vitesseTourne = 0.05f;
 	public float ecartementAvant = 0.4f;
 	public float ecartementTourne,ecartementMain = 0.2f;
@@ -17,14 +17,13 @@ public class MouvementPerso : MonoBehaviour {
 
 
 
-		float corpsPosition = corps.localPosition.z;
+		float corpsPosition = corps.localPosition.z;  // *10 CAR MA KInect n'est pas assez sensible
 		float epauleDroite = epDroite.localPosition.z;
-
-		print (epauleDroite);
 
 		// Avancer
 		if (corpsPosition > ecartementAvant) {
-				//	print ("avance");
+
+				print ("avance");
 				centreSalle.Translate (new Vector3 (0, 0, vitesseAvant));	
 			}
 		// Reculer
@@ -40,7 +39,7 @@ public class MouvementPerso : MonoBehaviour {
 		}
 		// Tourner Droite
 		if (epauleDroite < (epGauche.localPosition.z - ecartementTourne)) {
-			//	print("deuxième");
+			print("deuxième");
 			centreSalle.Rotate (new Vector3 (0, vitesseTourne, 0));		
 		}
 	}
