@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\HandRay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenes\MenuPrincipal.cs">
     <Files>
-      <File FileName="Assets\Scenes\HandRay.cs" Line="29" Column="99" />
-      <File FileName="Assets\Scenes\Activable.cs" Line="11" Column="2" />
+      <File FileName="Assets\Scenes\MenuPrincipal.cs" Line="13" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
