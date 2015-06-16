@@ -15,8 +15,12 @@ public class MouvementPerso : MonoBehaviour {
 
 	void Update () {
 
+
+
 		float corpsPosition = corps.localPosition.z;
 		float epauleDroite = epDroite.localPosition.z;
+
+		print (epauleDroite);
 
 		// Avancer
 		if (corpsPosition > ecartementAvant) {
