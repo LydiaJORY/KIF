@@ -115,7 +115,7 @@ public class KinectSensor : MonoBehaviour, KinectInterface {
 			
 			depthStreamHandle = IntPtr.Zero;
 			hr = NativeMethods.NuiImageStreamOpen(NuiImageType.DepthAndPlayerIndex, NuiImageResolution.resolution320x240, 0, 2, IntPtr.Zero, ref depthStreamHandle);
-			Debug.Log(depthStreamHandle);
+
 			if (hr != 0)
 			{
 				throw new Exception("Cannot open depth stream.");
@@ -123,7 +123,7 @@ public class KinectSensor : MonoBehaviour, KinectInterface {
 			
 			colorStreamHandle = IntPtr.Zero;
 			hr = NativeMethods.NuiImageStreamOpen(NuiImageType.Color, NuiImageResolution.resolution640x480, 0, 2, IntPtr.Zero, ref colorStreamHandle);
-			Debug.Log(colorStreamHandle);
+
 			if (hr != 0)
 			{
 				throw new Exception("Cannot open color stream.");
